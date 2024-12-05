@@ -155,3 +155,56 @@ Después de la guerra, la biblioteca de Minas Tirith necesita ser reorganizada. 
 Requerimientos
 Implementa una estructura de árbol B para almacenar y recuperar rápidamente libros por diferentes categorías.
 Implementa una función search_book(category: str, title: str) -> str que permita encontrar un libro dado su título y categoría.
+
+Ejercicio 4: Solución Numérica de Ecuaciones en la Antigua Grecia
+Implemente y compare tres métodos iterativos (bisección, secante y Newton-Raphson) para encontrar la raíz de la ecuación :
+
+Determine la cantidad de iteraciones necesarias para que cada método converja.
+Compare la precisión de cada método en términos del número de decimales correctos.
+
+
+Luke Skywalker se encuentra en una misión para recuperar su sable de luz perdido. Durante su travesía, encuentra una serie de cajas que contienen diferentes objetos de valor (que podrían ser herramientas o elementos útiles para su misión), pero su mochila tiene una capacidad limitada para llevar solo ciertos elementos.
+
+Cada objeto tiene un peso y un valor determinado. El sable de luz de Luke tiene un valor muy alto, pero también un peso considerable. Ayuda a Luke a decidir qué objetos debe llevar en su mochila para maximizar el valor de los objetos que puede cargar sin exceder la capacidad de la mochila.
+
+Datos:
+El sable de luz de Luke tiene un valor de 1000 (puntos de poder) y un peso de 10 (kilogramos).
+Existen varios objetos con diferentes valores y pesos. Luke puede llevar cualquiera de estos objetos siempre que no sobrepasen el límite de peso de la mochila, que es de 50 kilogramos.
+Objetos disponibles:
+Blaster: valor = 500, peso = 15 kg
+Raciones de comida: valor = 200, peso = 5 kg
+Cloak Jedi: valor = 400, peso = 8 kg
+Mapa Estelar: valor = 300, peso = 4 kg
+Comunicador Galactic: valor = 350, peso = 3 kg
+Sable de luz de Luke: valor = 1000, peso = 10 kg
+Objetivo:
+Implementa un algoritmo en Python que resuelva el problema de la mochila para ayudar a Luke Skywalker a seleccionar los objetos que debe llevar en su mochila. El objetivo es maximizar el valor total de los objetos sin exceder el peso máximo de 50 kg.
+
+
+Enunciado del ejercicio:
+
+Luke Skywalker se encuentra atrapado en una antigua cueva en Tatooine. Mientras explora la cueva, encuentra varias puertas y caminos que lo conducen a diferentes habitaciones llenas de objetos valiosos, pero algunos caminos están bloqueados por trampas. Además, el sable de luz de Luke se encuentra en una de las habitaciones, pero el camino está lleno de obstáculos.
+
+Cada habitación tiene un valor (indicado por la cantidad de puntos de poder que el sable podría ganar si Luke lo encuentra) y un costo en puntos de vida (que es el daño que Luke recibiría al atravesar las trampas). Luke tiene una cantidad limitada de puntos de vida, por lo que debe elegir cuidadosamente las habitaciones a las que se adentrará para maximizar el valor total de los objetos que recoja sin perder todos sus puntos de vida.
+
+Datos:
+Luke tiene 100 puntos de vida al comenzar.
+Las habitaciones están organizadas en un mapa de varias salas. En cada sala, hay una serie de caminos que conducen a otras salas (algunas son trampas, otras no).
+El objetivo es encontrar el sable de luz, que tiene un valor de 1000 puntos de poder. Si Luke se acerca a esta sala, pero no puede completar el recorrido sin perder demasiados puntos de vida, debe volver atrás y buscar otro camino.
+Estructura:
+Las salas están representadas como un grafo, donde cada nodo es una habitación y las aristas representan caminos entre las habitaciones.
+Cada habitación tiene un valor y un costo en puntos de vida:
+Sala 1 (Inicio): valor = 0, costo = 0
+Sala 2: valor = 500, costo = 10
+Sala 3: valor = 300, costo = 5
+Sala 4 (Sable de luz): valor = 1000, costo = 50
+Sala 5: valor = 200, costo = 15
+Sala 6: valor = 400, costo = 20
+Las habitaciones conectadas entre sí tienen caminos que pueden ser explorados (algunas habitaciones pueden llevar a trampas, por lo que si los puntos de vida de Luke llegan a 0, el recorrido no es válido).
+Requerimientos:
+Implementa un algoritmo de backtracking para ayudar a Luke a encontrar el camino óptimo que lo lleve a la sala que contiene el sable de luz sin perder todos sus puntos de vida.
+El algoritmo debe explorar todos los posibles caminos, evaluando cuál es el camino con el mayor valor acumulado sin exceder el límite de vida de 100 puntos.
+Devuelve el camino que Luke debe seguir (las habitaciones) y el valor total de los objetos que recoge en el camino.
+Restricciones:
+Luke solo puede tomar decisiones sobre caminos si no exceden los 100 puntos de vida.
+Si Luke no puede llegar a la sala del sable de luz, debe retornar el máximo valor posible sin perder demasiados puntos de vida.
