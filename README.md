@@ -208,3 +208,42 @@ Devuelve el camino que Luke debe seguir (las habitaciones) y el valor total de l
 Restricciones:
 Luke solo puede tomar decisiones sobre caminos si no exceden los 100 puntos de vida.
 Si Luke no puede llegar a la sala del sable de luz, debe retornar el máximo valor posible sin perder demasiados puntos de vida.
+
+
+Enunciado del ejercicio:
+
+Luke Skywalker se encuentra atrapado en una antigua cueva en Tatooine. Mientras explora la cueva, descubre varias habitaciones llenas de objetos valiosos, pero algunas de ellas están bloqueadas por trampas. En su búsqueda del sable de luz, Luke tiene que elegir qué caminos tomar para maximizar el valor de los objetos que recoge sin perder todos sus puntos de vida, ya que las trampas le causan daño.
+
+Datos:
+Luke tiene 100 puntos de vida al comenzar.
+Las habitaciones están organizadas como un grafo, donde cada nodo representa una habitación y las aristas representan caminos entre las habitaciones.
+Cada habitación tiene un valor (indicando la cantidad de puntos de poder que Luke podría ganar si entra) y un costo en puntos de vida (el daño que Luke recibe al entrar a esa habitación).
+El sable de luz tiene un valor de 1000 puntos de poder y está ubicado en una de las habitaciones de la cueva.
+Luke debe explorar las habitaciones, pero sólo puede avanzar por los caminos que no lo hagan perder todos sus puntos de vida.
+Estructura de las habitaciones:
+Sala 1 (Inicio): valor = 0, costo = 0
+Sala 2: valor = 500, costo = 10
+Sala 3: valor = 300, costo = 5
+Sala 4 (Sable de luz): valor = 1000, costo = 50
+Sala 5: valor = 200, costo = 15
+Sala 6: valor = 400, costo = 20
+Las habitaciones están conectadas por caminos de diferente costo (algunas son trampas, otras no).
+Objetivo:
+El objetivo es encontrar el camino óptimo que lleve a Luke a la sala que contiene el sable de luz, maximizando el valor de los objetos que recoge mientras se asegura de que sus puntos de vida no lleguen a 0.
+
+Apartado 1: Algoritmo de Dijkstra
+En este apartado, se utilizará el algoritmo de Dijkstra para encontrar el camino de menor costo en términos de puntos de vida que permita a Luke llegar a la sala del sable de luz, maximizando el valor de los objetos recogidos a lo largo del camino.
+
+Requerimientos:
+
+Implementa el algoritmo de Dijkstra para encontrar el camino de menor costo en términos de puntos de vida, desde la sala inicial hasta la sala del sable de luz.
+Durante la ejecución de Dijkstra, debes llevar un registro del valor acumulado de los objetos recogidos por Luke.
+Devuelve el camino con el mayor valor posible sin exceder el límite de 100 puntos de vida.
+Apartado 2: Algoritmo de Backtracking
+En este apartado, se utilizará el algoritmo de backtracking para explorar todas las posibles rutas desde la sala inicial hasta la sala del sable de luz. El objetivo es encontrar el camino que maximice el valor de los objetos recogidos sin que los puntos de vida de Luke lleguen a 0.
+
+Requerimientos:
+
+Implementa el algoritmo de backtracking para explorar todas las rutas posibles, asegurando que no se excedan los 100 puntos de vida.
+En cada paso, evalúa el valor total de los objetos recogidos hasta el momento y si el camino sigue siendo válido.
+Devuelve el camino con el mayor valor total de objetos recogidos, asegurándote de que los puntos de vida de Luke no lleguen a 0.
